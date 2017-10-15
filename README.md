@@ -5,7 +5,11 @@ Step-by-step instructions on setting up Homestead in Windows 7
 
 [Homestead](https://laravel.com/docs/homestead) is a Vagrant box people use to develop [Laravel](https://laravel.com) apps.
 
-Here's how you can get Homestead up and running in Windows 7. This is an alternative to the [official instructions](https://laravel.com/docs/homestead#installation-and-setup).
+Here's how you can get Homestead up and running in Windows 7.
+
+After following the instructions below, you'll have a Homestead Vagrant box running on your computer; you'll have a brand new Laravel app running inside of that Vagrant box; and you'll be able to access the homepage of that Laravel app using a web browser on your computer.
+
+This is an alternative to the [official instructions](https://laravel.com/docs/homestead#installation-and-setup).
 
 ## Prerequisites
 
