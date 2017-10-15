@@ -16,7 +16,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
 
 ## Procedure
 
-1. Download and install (i.e. [add](https://www.vagrantup.com/docs/cli/box.html#box-add)) the [Homestead Vagrant box](https://app.vagrantup.com/laravel/boxes/homestead) into Vagrant
+1. **Download and install the [Homestead Vagrant box](https://app.vagrantup.com/laravel/boxes/homestead)** into Vagrant
 
     ```bash
     $ vagrant box add laravel/homestead
@@ -25,7 +25,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     * During installation, when Vagrant asks you which provider you will be working with, select `virtualbox`
     * You can run `$ vagrant box list` to check which version of the box is installed
     
-2. Clone the Homestead Git repository
+2. **Clone the Homestead Git repository**
 
     ```bash
     $ git clone https://github.com/laravel/homestead.git ./Homestead
@@ -33,7 +33,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     
     * That instructs Git to download the Homestead Git repository from GitHub, and store it in a folder named `Homestead` in the current directory
     
-3. Check out the latest stable commit from that repository
+3. **Check out the latest stable commit** from the cloned repository
 
     * Prior to running the following commands, replace the `vX.Y.Z` with whichever tag is associated with the latest release of the repository (e.g. `v6.3.0`). The latest release of the repository is shown [here](https://github.com/laravel/homestead/releases/latest)
     * Finally, run the following commands:
@@ -45,7 +45,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     
     * The official instructions recommend doing that in case the commit checked out by default (i.e. the tip of the *master* branch) is in an insufficient state
 
-4. Generate the Homestead configuration file (and some other files)
+4. **Generate the Homestead configuration file** (i.e. `Homestead.yaml`)
 
     * If using bash, run:
 
@@ -59,15 +59,15 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     init.bat
     ```
     
-    * That instructs Windows to execute the instructions in that Batch script, one of which is to create a Homestead configuration file (i.e. `Homestead.yaml`) in the current folder
+    * That instructs Windows to execute the instructions in that shell/Batch script, one of which is to create a Homestead configuration file (i.e. `Homestead.yaml`) in the current folder
 
-5. Generate an SSH key pair
+5. **Generate an SSH key pair**
 
     * Launch `puttygen.exe` and generate an SSH key pair (e.g. *2048-bit RSA*)
     * Save the OpenSSH-formatted private key (via *Conversions > Export OpenSSH key*) onto your computer
     * Save the OpenSSH-formatted `authorized_keys` string (via copy/pasting it into a text file) onto your computer
 
-6. Create an app development folder
+6. **Create an app development folder**
 
     * If using bash, run:
 
@@ -85,7 +85,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     * You can name your app development folder whatever you want, and store it wherever you want
     * Subsequent instructions will assume your app development folder is `c:/path/to/myapps`
     
-7. Edit the Homestead configuration file
+7. **Edit the Homestead configuration file** (i.e. the `Homestead.yaml` file generated earlier)
 
     * Edit the fields shown below to have the values shown below:
 
@@ -111,7 +111,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     
     * Save the file
 
-8. Add an entry to the Windows `hosts` file
+8. **Add an entry to the Windows `hosts` file**
 
     * **As an Administrator**, edit the file: `C:\Windows\System32\drivers\etc\hosts`
     * Add the following line to the file:
@@ -121,9 +121,9 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     ```
     
     * Save the file
-    * That will tell your web browser (and other programs on your computer) that the server with the hostname `myapp.local` has the IP address `192.168.10.10`
+    * That will allow you to visit your app at `http://myapp.local`
 
-9. Spin up the Vagrant box
+9. **Spin up the Vagrant box**
 
     * Inside your `Homestead` folder, run the following:
 
@@ -131,18 +131,18 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     $ vagrant up
     ```
     
-    * That will spin up the Vagrant box and configure it (i.e. provision it) according to the Homestead configuration file
-    * Once the Vagrant box has been provisioned, you can visit [http://myapp.local](http://myapp.local) in your web browser. You may see a page that says, "No input file specified." (screenshot below).
+    * That will spin up the Vagrant box and configure it (i.e. provision it) according to the settings defined in the Homestead configuration file
+    * Once the Vagrant box has been provisioned, you will be able to visit [http://myapp.local](http://myapp.local) in your web browser. You may see a page there that says, "No input file specified." (screenshot below).
     
         ![](./no-input-file-specified.png)
     
-10. Connect to the Vagrant box via SSH
+10. **Connect to the Vagrant box** via SSH
 
     ```bash
     $ vagrant ssh
     ```
         
-11. Create a Laravel app on the Vagrant box
+11. **Create a Laravel app** on the Vagrant box
 
     ```bash
     $ cd /home/vagrant/code
@@ -151,7 +151,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
 
     * That will create a Laravel app, whose files are stored in `/home/vagrant/code/myapp`
 
-12. Visit the app's homepage
+12. **Visit the app's homepage**
 
     * Using a web browser on your computer (i.e. not on the Vagrant box), visit [http://myapp.local](http://myapp.local)
     * You will see the app's homepage (i.e. the "Laravel" page)
