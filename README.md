@@ -108,7 +108,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     ```
     
     * Save the file
-    * That will make it so, when you refer to that host, your browser thinks you're referring to that IP address
+    * That will tell your web browser the server with that hostname has that IP address
 
 9. Spin up the Vagrant box
 
