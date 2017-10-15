@@ -18,14 +18,18 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
 
 1. **Download and install the [Homestead Vagrant box](https://app.vagrantup.com/laravel/boxes/homestead)** into Vagrant
 
+    * Run:
+
     ```bash
     $ vagrant box add laravel/homestead
     ```
     
     * During installation, when Vagrant asks you which provider you will be working with, select `virtualbox`
-    * You can run `$ vagrant box list` to check which version of the box is installed
+    * You can run `$ vagrant box list` to check which version of the Homestead Vagrant box is installed
     
 2. **Clone the Homestead Git repository**
+
+    * Run:
 
     ```bash
     $ git clone https://github.com/laravel/homestead.git ./Homestead
@@ -36,7 +40,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
 3. **Check out the latest stable commit** from the cloned repository
 
     * Prior to running the following commands, replace the `vX.Y.Z` with whichever tag is associated with the latest release of the repository (e.g. `v6.3.0`). The latest release of the repository is shown [here](https://github.com/laravel/homestead/releases/latest)
-    * Finally, run the following commands:
+    * Finally, run:
 
     ```bash
     $ cd ./Homestead
@@ -125,7 +129,7 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
 
 9. **Spin up the Vagrant box**
 
-    * Inside your `Homestead` folder, run the following:
+    * Inside your `Homestead` folder, run:
 
     ```bash
     $ vagrant up
@@ -138,11 +142,15 @@ Here's how you can get Homestead up and running in Windows 7. This is an alterna
     
 10. **Connect to the Vagrant box** via SSH
 
+    * Run:
+
     ```bash
     $ vagrant ssh
     ```
         
 11. **Create a Laravel app** on the Vagrant box
+
+    * On the Vagrant box, run:
 
     ```bash
     $ cd /home/vagrant/code
