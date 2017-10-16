@@ -14,7 +14,7 @@ This is an alternative to the [official instructions](https://laravel.com/docs/h
 ## Prerequisites
 
 1. You're using Windows 7
-2. You have [Git](https://git-scm.com/docs/git-clone) installed
+2. You have [Git](https://git-scm.com) installed
 3. You have [VirtualBox](https://www.virtualbox.org) and [Vagrant](https://www.vagrantup.com) installed
 4. You have [PuTTY Key Generator](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (a.k.a. `puttygen.exe`) on your computer
 
